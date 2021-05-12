@@ -24,6 +24,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/component/base/icon/icon",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
