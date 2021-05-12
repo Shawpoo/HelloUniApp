@@ -4,6 +4,7 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
+		<button @click="openComponent">基础组件</button>
 	</view>
 </template>
 
@@ -18,7 +19,11 @@
 
 		},
 		methods: {
-
+			openComponent() {
+				uni.navigateTo({
+					url: "../component/base/base_index"
+				})
+			}
 		}
 	}
 </script>
@@ -44,7 +49,7 @@
 		display: flex;
 		justify-content: center;
 	}
-  
+
 	.title {
 		font-size: 36rpx;
 		color: #8f8f94;

@@ -6,7 +6,25 @@
 				"navigationBarTitleText": "uni-app"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/component/base/view/view",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "View",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/component/base/base_index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "基础组件",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
