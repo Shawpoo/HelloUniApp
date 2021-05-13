@@ -3,6 +3,7 @@
 		<button class="btn" @click="open">执行云函数</button>
 		<button class="btn" @click="select">查询数据</button>
 		<button class="btn" @click="upload">上传文件</button>
+		<text v-show="progress != 0">{{progress}}%</text>
 		<view>
 			<image class="img" :src="src"></image>
 		</view>
@@ -14,6 +15,7 @@
 	export default {
 		data() {
 			return {
+				progress: 0,
 				src: '/static/logo.png'
 			}
 		},
@@ -61,6 +63,12 @@
 						uniCloud.uploadFile({
 							filePath: filePath,
 							cloudPath: fileName,
+							onUploadProgress: function(progressEvent) {
+								var percentCompleted = Math.round(
+									(progressEvent.loaded * 100) / progressEvent.total
+								);
+								self.progress = percentCompleted;
+							},
 							success(res) {
 								self.src = res.fileID;
 								console.log("!!!: " + self.src);
@@ -83,7 +91,8 @@
 						self.src
 					],
 					success(res) {
-						self.src = '/static/logo.png',
+						self.src = '/static/logo.png';
+						self.progress = 0;
 						console.log("delete file success: ", res);
 					},
 					fail(err) {
