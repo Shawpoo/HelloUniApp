@@ -5,11 +5,18 @@
 			<text class="title">{{title}}</text>
 		</view>
 		<button @click="openComponent">基础组件</button>
+		<btn color='green' @change='change'>这是个自定义组件</btn>
 	</view>
 </template>
 
 <script>
+	// 导入自定义控件
+	import btn from '@/pages/component/custom/btn.vue';
 	export default {
+		// 声明自定义控件
+		components: {
+			btn
+		},
 		data() {
 			return {
 				title: 'Hello'
@@ -23,6 +30,9 @@
 				uni.navigateTo({
 					url: "../component/base/base_index"
 				})
+			},
+			change(color) {
+				console.log('change: ' + color);
 			}
 		}
 	}
