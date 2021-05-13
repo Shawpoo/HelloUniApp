@@ -25,6 +25,9 @@
 		onLoad() {
 
 		},
+		onTabItemTap() {
+			console.log('tab selected. index');
+		},
 		methods: {
 			openComponent() {
 				uni.navigateTo({
