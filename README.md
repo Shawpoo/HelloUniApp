@@ -8,3 +8,7 @@ Uni-app开发学习记录
 - 4 unpackage - 编译后的文件目录
 - 5 utils - 公共的工具类
 - 6 common - 公用的文件
+- 7 App.vue 
+- 8 main.js - 应用入口
+- 9 mainfest.json - 项目配置
+- 10 pages.json - 页面配置
