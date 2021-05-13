@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
+		<image class="logo" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-eb921c33-31a7-4c5b-a99e-99ecee3103bf/42488028-3274-4e97-b78d-39b17a023499.png"></image>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
@@ -19,7 +19,7 @@
 		},
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello, 馗哥'
 			}
 		},
 		onLoad() {
