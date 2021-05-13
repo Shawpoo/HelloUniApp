@@ -1,6 +1,7 @@
 <template>
 	<view>
-		<button @click="open">执行云函数</button>
+		<button class="btn" @click="open">执行云函数</button>
+		<button class="btn" @click="select">查询数据</button>
 	</view>
 </template>
 
@@ -29,11 +30,27 @@
 
 					}
 				})
+			},
+			select() {
+				uniCloud.callFunction({
+					name: "get_list",
+					data: {
+						username: "Shawpoo",
+					},
+					success(res) {
+						console.log("success: ", res);
+					},
+					fail() {
+
+					}
+				})
 			}
 		}
 	}
 </script>
 
 <style>
-
+	.btn {
+		margin: 20rpx 30rpx;
+	}
 </style>
