@@ -58,7 +58,11 @@
 					count: 1,
 					success(res) {
 						const filePath = res.tempFilePaths[0];
-						const fileName = res.tempFiles[0].name;
+						var fileName = res.tempFiles[0].name;
+						if (fileName == "undefined" || fileName == null || fileName === '') {
+							const array = filePath.split('/');
+							fileName = array[array.length - 1];
+						}
 						console.log("choose success: ", res);
 						uniCloud.uploadFile({
 							filePath: filePath,
